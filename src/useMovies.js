@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const KEY = 'f84fc31d';
+const KEY = '29b2dacb';
 
 export function useMovies(query) {
   const [movies, setMovies] = useState([]);
@@ -23,7 +23,7 @@ export function useMovies(query) {
             {
               signal: controller.signal,
               method: 'GET',
-              mode: 'cors',
+              mode: 'no-cors',
               headers: { 'Content-Type': 'application/json' },
             }
           );
