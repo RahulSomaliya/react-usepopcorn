@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export function useKey(key, action) {
   useEffect(
@@ -8,9 +8,11 @@ export function useKey(key, action) {
           action();
         }
       }
-      document.addEventListener('keydown', callback);
+
+      document.addEventListener("keydown", callback);
+
       return function () {
-        document.removeEventListener('keydown', callback);
+        document.removeEventListener("keydown", callback);
       };
     },
     [action, key]
